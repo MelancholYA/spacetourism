@@ -45,7 +45,7 @@ const Destination = () => {
 					<span>01</span>
 					Pick your destination
 				</h3>
-				<img src={dests[toShow].image.default} />
+				<img src={dests[toShow].image.default} alt='' />
 			</div>
 			<div className='right'>
 				<div className='tabs'>

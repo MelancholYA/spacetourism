@@ -6,7 +6,7 @@ const Header = () => {
 	const [showMenu, toggleMenu] = useState(false);
 	return (
 		<header>
-			<img src={Logo} />
+			<img src={Logo} alt='' />
 			<button onClick={() => toggleMenu(!showMenu)}>
 				<span className={showMenu ? 'closeButton' : ''}></span>
 			</button>
