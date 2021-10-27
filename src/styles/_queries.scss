@@ -1,0 +1,166 @@
+@media (max-width: 540px) {
+	.page {
+		padding-top: 70px !important;
+	}
+	header {
+		margin: 0;
+
+		button {
+			all: unset;
+			width: 50px;
+			height: 50px;
+			display: block;
+			span {
+				background: rgb(255, 255, 255);
+				height: 3px;
+				width: 25px;
+				display: block;
+				transition: 0.3s;
+				&::before,
+				&::after {
+					content: '';
+					position: absolute;
+					top: -9px;
+					left: 0;
+					height: inherit;
+					width: inherit;
+					background: inherit;
+					transition: 0.3s;
+				}
+				&::after {
+					top: 9px;
+				}
+			}
+		}
+		.closeButton {
+			transform: rotate(45deg);
+			&::before,
+			&::after {
+				transform: rotate(-90deg);
+				top: 0;
+			}
+		}
+		.links {
+			display: flex;
+			flex-direction: column;
+			min-width: 60%;
+			position: absolute;
+			top: 70px;
+			height: calc(100vh - 70px);
+			right: -100%;
+			transition: 0.3s;
+			backdrop-filter: blur(15px);
+
+			&::after {
+				content: none;
+			}
+		}
+		.open {
+			right: 0;
+		}
+	}
+	.home {
+		background: url('../assets/home/background-home-mobile.jpg');
+	}
+	.destination,
+	.crew {
+		padding: 15px;
+		flex-direction: column;
+		.left {
+			img {
+				max-width: 150px;
+			}
+			h3 {
+				margin-bottom: 30px;
+			}
+		}
+		.right {
+			width: 100%;
+			.body {
+				.details {
+					flex-direction: column;
+					justify-content: space-around;
+				}
+				h1 {
+					font-size: 75px;
+				}
+			}
+		}
+	}
+	.crew {
+		flex-direction: column-reverse;
+		img {
+			width: 100px;
+			margin: auto;
+			border-bottom: 2px solid #dcdcdc45;
+		}
+		* {
+			font-size: 18px;
+			margin: 10px;
+		}
+	}
+}
+@media (max-width: 768px) {
+	.page {
+		text-align: center;
+	}
+	.home {
+		flex-direction: column;
+		padding: 12px;
+		background: url('../assets/home/background-home-tablet.jpg');
+		.text {
+			h1 {
+				font-size: 80px;
+			}
+		}
+	}
+	.destination,
+	.crew {
+		flex-direction: column;
+		.right {
+			width: 80%;
+			.body {
+				.details {
+					justify-content: space-around;
+				}
+			}
+		}
+	}
+
+	.crew {
+		flex-direction: column;
+		img {
+			width: 250px;
+			margin: auto;
+			border-bottom: 2px solid #dcdcdc45;
+		}
+		* {
+			font-size: 18px;
+			margin: 10px;
+		}
+	}
+	.tech {
+		align-items: center;
+		h3 {
+			margin: 0;
+		}
+		.container {
+			flex-direction: column-reverse;
+			img {
+				width: 100%;
+				margin-bottom: 50px;
+			}
+			.text {
+				h1 {
+					margin: 10px;
+				}
+			}
+			.tabs {
+				margin: 10px;
+				button {
+					display: inline;
+				}
+			}
+		}
+	}
+}
